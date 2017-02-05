@@ -4,7 +4,8 @@
   "description": "Learning testing framework mocha js. Following https://github.com/ideaq/learn-mocha",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "test:cover": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && codecov"
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,8 @@
   },
   "homepage": "https://github.com/Abdelmageed/learn-mocha#readme",
   "devDependencies": {
+    "codecov": "^1.0.1",
+    "istanbul": "^0.4.5",
     "mocha": "^3.2.0"
   }
 }
